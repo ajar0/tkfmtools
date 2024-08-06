@@ -432,6 +432,23 @@ const calculateScore = (characters) => {
   );
 };
 
+// calculate priority score
+const calculateScoreNew = (characters) => {
+  // 3 - SSR, 2 - SR, 1 - R, 0 - N
+  const existedRarity = Array(4).fill(false);
+  const rarityExchange = [1, 1, 5, 10];
+  const rarityprobability = [10, 10, 1, 1];
+  let totalScore = 0;
+  let samples = 0;
+
+  characters.forEach((c) => {
+    totalScore += rarityExchange[c.rarity] * rarityprobability[c.rarity];
+    samples += rarityprobability[c.rarity];
+  });
+
+  return totalScore / samples;
+};
+
 const calcMinCombs = (inputTags, currCombs) => {
   let combs = Array.from(currCombs);
   for (let j = combs.length - 1; j >= 0; j--) {
@@ -555,7 +572,7 @@ const Filter = () => {
             result.push({
               tags,
               characters: survivors,
-              score: calculateScore(survivors),
+              score: calculateScoreNew(survivors),
             });
           }
         });

@@ -15,7 +15,7 @@ export const TableBody = ({ sortedData }) => {
     <MuiTableBody>
       {sortedData.map((d, i) => (
         <MuiTableRow key={i}>
-          <MuiTableCell padding="none">{i + 1}</MuiTableCell>
+          <MuiTableCell padding="none">{i + 1}<div>{d.score.toFixed(2)}</div></MuiTableCell>
           <MuiTableCell>
             <TextWrapper>
               {d.tags.map((i) => charString.tags[i]).join(", ")}
