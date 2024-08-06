@@ -61,6 +61,7 @@ export const lightTheme = {
     linkHover: "#0056b3",
     dropdownHover: "#bdbdbd",
     rank: { high: "#1976d2", low: "#d32f2f" },
+    rarity: ["#bbb3af", "#97bbdb", "#ffcb8f", "#e58beb"],
   },
   chart: {
     textColor: "#333",
@@ -106,6 +107,7 @@ export const darkTheme = {
     linkHover: "#e1f5fe",
     dropdownHover: "#757575",
     rank: { high: "#90caf9", low: "#ef9a9a" },
+    rarity: ["#bbb3af", "#97bbdb", "#ffcb8f", "#e58beb"],
   },
   chart: {
     textColor: "#ffffff",

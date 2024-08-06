@@ -76,9 +76,9 @@ const CharacterImage = styled(ImgCard)`
     width: 3rem;
     height: 3rem;
     border-radius: 100%;
-    border: 2.5px solid
+    border: 3px solid
       ${({ theme, rarity }) =>
-        rarity < 2 ? theme.colors.shadow : theme.colors.secondary};
+        theme.colors.rarity[rarity]};
   }
   img {
     border: none;
