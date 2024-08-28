@@ -437,7 +437,7 @@ const calculateScoreNew = (characters) => {
   // 3 - SSR, 2 - SR, 1 - R, 0 - N
   const existedRarity = Array(4).fill(false);
   const rarityExchange = [1, 1, 5, 10];
-  const rarityprobability = [10, 10, 1, 1];
+  const rarityprobability = [30, 10, 1, 1];
   let totalScore = 0;
   let samples = 0;
 
